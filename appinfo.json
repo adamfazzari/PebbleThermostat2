@@ -1,0 +1,51 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "adam.fazzari@gmail.com",
+    "longName": "Pebble Thermostat 2",
+    "projectType": "pebblejs",
+    "resources": {
+        "media": [
+            {
+                "file": "images/menu_icon.png",
+                "menuIcon": true,
+                "name": "IMAGE_MENU_ICON",
+                "type": "png"
+            },
+            {
+                "file": "images/logo_splash.png",
+                "name": "IMAGE_LOGO_SPLASH",
+                "type": "png"
+            },
+            {
+                "file": "images/tile_splash.png",
+                "name": "IMAGE_TILE_SPLASH",
+                "type": "png"
+            },
+            {
+                "file": "fonts/UbuntuMono-Regular.ttf",
+                "name": "MONO_FONT_14",
+                "type": "font"
+            },
+            {
+                "file": "images/up.png",
+                "name": "IMAGES_UP_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/down.png",
+                "name": "IMAGES_DOWN_PNG",
+                "type": "png"
+            }
+        ]
+    },
+    "shortName": "Pebble Thermostat 2",
+    "uuid": "53238720-3846-4899-8a2f-84bd26fd7d21",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    }
+}
