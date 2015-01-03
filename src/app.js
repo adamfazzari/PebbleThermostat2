@@ -47,22 +47,6 @@ var errorscreen = new UI.Card({
   subtitle: 'could not connect'
 });
 
-//CurrentTemp
-var current_temp = {title: "Temperature", subtitle: "N/A"};
-var setpoint_temp = {title: "Setpoint Temp", subtitle: "N/A"};
-var fanmode = {title: "Fan", subtitle: "N/A"};
-
-// Main menu
-var mainmenu = new UI.Menu({
-  sections: [{
-    items: [
-      setpoint_temp,
-      current_temp,
-      fanmode
-    ]
-  }]
-});
-
 var mainwindow = new UI.Window({
   fullscreen: true,
   backgroundColor: 'white',
@@ -80,13 +64,11 @@ mainwindow.add(status_field);
 mainwindow.on('click','up',function(){
   setpoint += 1;
   setpoint_field.text('Setpoint: ' + setpoint + 'C');
-  setpoint_temp.subtitle = setpoint + ' C';
 });
       
 mainwindow.on('click','down',function(){
   setpoint -= 1;
   setpoint_field.text('Setpoint: ' + setpoint + 'C');
-  setpoint_temp.subtitle = setpoint + ' C';
 });
 
 mainwindow.on('click','back',function(){
@@ -120,15 +102,6 @@ mainwindow.on('longClick','back',function(){
   mainwindow.hide();
 });
 
-mainmenu.on('select', function(e){
-  console.log("Item " + e.item.title);
-  if (e.item.title == setpoint_temp.title || e.item.title == current_temp.title){
-    mainwindow.show();
-  } else if (e.item.title == fanmode.title) {
-    mainwindow.show();
-  }
-});
-
 splashscreen.show();
 
 ajax({url: URL, type: 'json'},
@@ -141,22 +114,12 @@ ajax({url: URL, type: 'json'},
         status_field.text('Away');
       } else {
         status_field.text('Home');
-      }
-      
-      if (json.fmode == 2) {
-        fanmode.subtitle = "On";
-      } else {
-        fanmode.subtitle = "Auto";
-      }
-      current_temp.subtitle = temp + ' C';
-      setpoint_temp.subtitle = setpoint + ' C';
-      
-      current_temp_field.text('Current: ' + temp + ' C');
-      setpoint_field.text('Setpoint: ' + setpoint + ' C');
+      } 
+      current_temp_field.text('Current: ' + temp + 'C');
+      setpoint_field.text('Setpoint: ' + setpoint + 'C');
       
       splashscreen.hide();
-      //mainwindow.show();
-      mainmenu.show();
+      mainwindow.show();
     },
     function(error){
       console.log('Failure');
