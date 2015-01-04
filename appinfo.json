@@ -30,6 +30,11 @@
                 "type": "font"
             },
             {
+                "file": "images/fan.png",
+                "name": "IMAGES_FAN_PNG",
+                "type": "png"
+            },
+            {
                 "file": "images/up.png",
                 "name": "IMAGES_UP_PNG",
                 "type": "png"
