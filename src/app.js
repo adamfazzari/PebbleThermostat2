@@ -190,7 +190,7 @@ function set_fan_field(fan_mode){
 
 //Configuration
 Pebble.addEventListener('showConfiguration', function() {
-  var url = 'http://example.com/config.html';
+  var url = 'https://rawgithub.com/adamfazzari/PebbleThermostat2/master/html/config.html';
 
   Pebble.openURL(url);
 });

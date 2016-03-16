@@ -35,13 +35,13 @@
                 "type": "bitmap"
             },
             {
-                "file": "images/down.png",
-                "name": "IMAGES_DOWN_PNG",
+                "file": "images/fan.png",
+                "name": "IMAGES_FAN_PNG",
                 "type": "bitmap"
             },
             {
-                "file": "images/fan.png",
-                "name": "IMAGES_FAN_PNG",
+                "file": "images/down.png",
+                "name": "IMAGES_DOWN_PNG",
                 "type": "bitmap"
             }
         ]
