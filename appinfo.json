@@ -1,7 +1,7 @@
 {
     "appKeys": {},
     "capabilities": [
-        ""
+        "configurable"
     ],
     "companyName": "adam.fazzari@gmail.com",
     "longName": "Pebble Thermostat 2",
@@ -12,17 +12,17 @@
                 "file": "images/menu_icon.png",
                 "menuIcon": true,
                 "name": "IMAGE_MENU_ICON",
-                "type": "png"
+                "type": "bitmap"
             },
             {
                 "file": "images/logo_splash.png",
                 "name": "IMAGE_LOGO_SPLASH",
-                "type": "png"
+                "type": "bitmap"
             },
             {
                 "file": "images/tile_splash.png",
                 "name": "IMAGE_TILE_SPLASH",
-                "type": "png"
+                "type": "bitmap"
             },
             {
                 "file": "fonts/UbuntuMono-Regular.ttf",
@@ -30,27 +30,33 @@
                 "type": "font"
             },
             {
-                "file": "images/fan.png",
-                "name": "IMAGES_FAN_PNG",
-                "type": "png"
-            },
-            {
                 "file": "images/up.png",
                 "name": "IMAGES_UP_PNG",
-                "type": "png"
+                "type": "bitmap"
             },
             {
                 "file": "images/down.png",
                 "name": "IMAGES_DOWN_PNG",
-                "type": "png"
+                "type": "bitmap"
+            },
+            {
+                "file": "images/fan.png",
+                "name": "IMAGES_FAN_PNG",
+                "type": "bitmap"
             }
         ]
     },
+    "sdkVersion": "3",
     "shortName": "Pebble Thermostat 2",
+    "targetPlatforms": [
+        "aplite",
+        "basalt"
+    ],
     "uuid": "53238720-3846-4899-8a2f-84bd26fd7d21",
     "versionCode": 1,
     "versionLabel": "1.0",
     "watchapp": {
+        "hiddenApp": false,
         "watchface": false
     }
 }

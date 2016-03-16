@@ -8,7 +8,7 @@ var UI = require('ui');
 var Vector2 = require('vector2');
 var Vibe = require('ui/vibe');
 var ajax = require('ajax');
-var URL = 'http://192.168.0.152/tstat';
+var URL = 'http://adamfazzari.ddns.net:8152/tstat';
 var DISPLAY_CELSIUS = true;              //Display units
 var AWAY_TEMP = 64.5;                    //Temperature to set when 'away'
 var HOME_TEMP = 71;                      //Temperature to set when 'home'
@@ -81,7 +81,7 @@ var errorscreen = new UI.Card({
 //Main screen with up and down buttons for adjusting setpoint
 var mainwindow = new UI.Window({
   fullscreen: true,
-  backgroundColor: 'white',
+  backgroundColor: 'black',
   action: {
     up: 'images/up.png',
     down: 'images/down.png',
@@ -217,4 +217,4 @@ ajax({url: URL, type: 'json'},
       console.log('Failure');
       splashscreen.hide();
       errorscreen.show();
-    });
+});
