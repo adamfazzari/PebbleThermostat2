@@ -8,7 +8,7 @@ var UI = require('ui');
 var Vector2 = require('vector2');
 var Vibe = require('ui/vibe');
 var ajax = require('ajax');
-var URL = 'http://adamfazzari.ddns.net:8152/tstat';
+var URL = 'http://192.168.0.152/tstat';
 var DISPLAY_CELSIUS = true;              //Display units
 var AWAY_TEMP = 64.5;                    //Temperature to set when 'away'
 var HOME_TEMP = 71;                      //Temperature to set when 'home'
@@ -187,6 +187,13 @@ function set_fan_field(fan_mode){
     fan_field.text('Fan: On');
   }
 }
+
+//Configuration
+Pebble.addEventListener('showConfiguration', function() {
+  var url = 'http://example.com/config.html';
+
+  Pebble.openURL(url);
+});
 
 //Main app starts here
 splashscreen.show();
